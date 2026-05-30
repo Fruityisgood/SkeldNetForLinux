@@ -67,12 +67,12 @@ class Window(Gtk.Window):
             self.error_dialog("Among Us is Running", "Please close Among Us")
         else:
             # Deletes regionInfo.dat
-            if os.path.exists(HOME + "/.steam/steam/steamapps/compatdata/945360/pfx/drive_c/users/steamuser/AppData/LocalLow/Innersloth/Among Us/regionInfo.dat"):
+            if os.path.exists(HOME + "/.steam/steam/steamapps/compatdata/945360/pfx/drive_c/users/steamuser/AppData/LocalLow/Innersloth/Among Us/regionInfo.json"):
                 print("File Exists")
                 os.remove(
                     HOME + "/.steam/steam/steamapps/compatdata/945360/pfx/"
                     "drive_c/users/steamuser/AppData/LocalLow/Innersloth/"
-                    "Among Us/regionInfo.dat"
+                    "Among Us/regionInfo.json"
                 )
             thread = threading.Thread(target=self.download_thread)
             thread.daemon = True
@@ -92,11 +92,11 @@ class Window(Gtk.Window):
 
     def download_thread(self):
         try:  # Downloads skeld.net regionInfo
-            regionfile = requests.get("https://skeld.net/setup/regionInfo.dat")
+            regionfile = requests.get("https://api.skeld.net/regionInfo")
             with open(
                     HOME + "/.steam/steam/steamapps/compatdata/945360/pfx/"
                            "drive_c/users/steamuser/AppData/LocalLow/Innersloth/"
-                           "Among Us/regionInfo.dat",
+                           "Among Us/regionInfo.json",
                     "wb"
             ) as f:
                 f.write(regionfile.content)
@@ -119,4 +119,4 @@ if __name__ == '__main__':
 
 # Notes:
 # steam steam://rungameid/945360
-# https://skeld.net/setup/regionInfo.dat
+# https://api.skeld.net/regionInfo
