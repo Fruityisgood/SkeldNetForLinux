@@ -1,4 +1,4 @@
-# skeld.net for Linux
+# SkeldNetForLinux
 
 This is a tool for Linux that allows you to play Among Us with [skeld.net](https://skeld.net/) modded servers.
 
@@ -8,9 +8,10 @@ This is a tool for Linux that allows you to play Among Us with [skeld.net](https
 - "Launch Among Us" option doesn't just launches Steam's Among Us page, and not Among Us
 - Doesn't detect if the game isn't installed
 - UI isn't very good
+- ~~Not working on latest Among Us versions~~ (fixed)
 
 # How to install
-~~If this becomes popular enough I will make a .deb and .rpm, however for now just~~ download and run the main.py after installing the dependencies
+~~If this becomes popular enough I will make a .deb and .rpm, however for now~~ just download and run the main.py after installing the dependencies
 
 # Dependencies
 `Fedora: dnf install python3 python3-gobject python3-psutil gtk3`
