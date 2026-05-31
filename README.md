@@ -1,4 +1,4 @@
-# SkeldNetForLinux
+# skeld.net for Linux
 
 This is a tool for Linux that allows you to play Among Us with [skeld.net](https://skeld.net/) modded servers.
 
@@ -10,7 +10,7 @@ This is a tool for Linux that allows you to play Among Us with [skeld.net](https
 - UI isn't very good
 
 # How to install
-If this becomes popular enough I will make a .deb and .rpm, however for now just download and run the main.py after installing the dependencies
+~~If this becomes popular enough I will make a .deb and .rpm, however for now just~~ download and run the main.py after installing the dependencies
 
 # Dependencies
 `Fedora: dnf install python3 python3-gobject python3-psutil gtk3`
